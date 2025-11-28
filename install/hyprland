@@ -1,0 +1,4 @@
+if ! command -v hyprland >/dev/null 2>&1; then
+echo "installing hyprland"
+zerossudo pacman -S hyprland
+fi

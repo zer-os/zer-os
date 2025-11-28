@@ -1,3 +1,4 @@
+clear
 echo ""
 echo ""
 echo "so you installed arch?"
@@ -10,11 +11,16 @@ echo "#!/bin/bash" > /tmp/askpass.sh
 printf 'echo %q\n' "$ZEROSPASSWORD" >> /tmp/askpass.sh
 chmod 500 /tmp/askpass.sh
 export SUDO_ASKPASS=/tmp/askpass.sh
+zerossudo() { sudo -A "$@"; }
+export -f zerossudo
 echo ""
 echo ""
 source install/init
 echo ""
 source install/pacmanfile
 echo ""
-sudo -A rm /tmp/askpass.sh
+source install/hyprland
+echo ""
+zerossudo rm /tmp/askpass.sh
 unset SUDO_ASKPASS
+unset -f zerossudo

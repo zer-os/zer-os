@@ -1,0 +1,18 @@
+zerosinstall() { sudo -A "$@"; }
+export -f zerosinstall
+
+echo "updating to latest packages"
+zerosinstall pacman -Syu --noconfirm
+echo ""
+echo "installing git"
+zerosinstall pacman -S git --noconfirm
+echo ""
+echo "installing paru"
+zerosinstall pacman -S --needed base-devel
+echo ""
+git clone https://aur.archlinux.org/paru.git ~/.zerosparu
+cd ~/.zerosparu
+PACMAN_AUTH="zerosinstall" makepkg -si --noconfirm
+cd ~
+rm -rf ~/.zerosparu
+echo ""

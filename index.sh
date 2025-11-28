@@ -6,8 +6,14 @@ echo ""
 echo "let's begin from the zeros"
 echo ""
 read -s -p "enter your sudo password : " ZEROSPASSWORD
+echo "#!/bin/bash" > /tmp/askpass.sh
+printf 'echo %q\n' "$ZEROSPASSWORD" >> /tmp/askpass.sh
+chmod 500 /tmp/askpass.sh
+export SUDO_ASKPASS=/tmp/askpass.sh
 echo ""
 echo ""
-echo "$ZEROSPASSWORD" | sudo -S ls
+source install/init
 echo ""
 echo ""
+sudo -A rm /tmp/askpass.sh
+unset SUDO_ASKPASS

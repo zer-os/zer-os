@@ -21,6 +21,8 @@ source install/pacmanfile
 echo ""
 source install/hyprland
 echo ""
+source install/gum
+echo ""
 zerossudo rm /tmp/askpass.sh
 unset SUDO_ASKPASS
 unset -f zerossudo

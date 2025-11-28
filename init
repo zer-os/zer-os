@@ -9,8 +9,8 @@ echo "installing gum"
 zerossudo pacman -S gum --noconfirm
 fi
 
-git clone https://github.com/zer-os/zer-os.git ~/.zerosinstall/
+git clone https://github.com/zer-os/zer-os.git --depth 1 ~/.zerosinstall/
 cd ~/.zerosinstall/
 chmod +x index
 clear
-gum confirm && ~/.zerosinstall/index || echo "installation cancelled"
+gum confirm "install?" && ~/.zerosinstall/index || echo "installation cancelled"

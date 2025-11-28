@@ -10,6 +10,6 @@ alias install='~/.zerosinstall/index'
 clear
 echo "now, when ever you are ready, type"
 echo "--------------"
-echo "install"
+echo -e "   \033[1;34minstall\033[0m    "
 echo "--------------"
 echo "and hit enter"

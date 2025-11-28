@@ -6,7 +6,7 @@ fi
 git clone https://github.com/zer-os/zer-os.git ~/.zerosinstall/
 cd ~/.zerosinstall/
 chmod +x index
-export alias install='~/.zerosinstall/index'
+alias install='~/.zerosinstall/index'
 clear
 echo "now, when ever you are ready, type"
 echo "--------------"

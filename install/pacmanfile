@@ -1,0 +1,4 @@
+echo "installing pacmanfile"
+curl -s https://raw.githubusercontent.com/cloudlena/pacmanfile/refs/heads/main/pacmanfile -o /tmp/pacmanfile
+chmod +x /tmp/pacmanfile
+sudo -A mv /tmp/pacmanfile /usr/local/bin/pacmanfile

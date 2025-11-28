@@ -14,6 +14,7 @@ echo ""
 echo ""
 source install/init
 echo ""
+source install/pacmanfile
 echo ""
 sudo -A rm /tmp/askpass.sh
 unset SUDO_ASKPASS

@@ -3,13 +3,14 @@ echo "installing git"
 sudo pacman -S git --noconfirm
 echo ""
 fi
+
+if ! command -v gum >/dev/null 2>&1; then
+echo "installing gum"
+zerossudo pacman -S gum --noconfirm
+fi
+
 git clone https://github.com/zer-os/zer-os.git ~/.zerosinstall/
 cd ~/.zerosinstall/
 chmod +x index
-alias install='~/.zerosinstall/index'
 clear
-echo "now, when ever you are ready, type"
-echo "--------------"
-echo -e "   \033[1;34minstall\033[0m    "
-echo "--------------"
-echo "and hit enter"
+gum confirm && ~/.zerosinstall/index || echo "installation cancelled"

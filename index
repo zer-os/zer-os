@@ -21,8 +21,14 @@ source install/pacmanfile
 echo ""
 source install/hyprland
 echo ""
-source install/gum
+source install/tui
 echo ""
+source install/gui
 zerossudo rm /tmp/askpass.sh
+rm -rf ~/.zerosinstall
 unset SUDO_ASKPASS
 unset -f zerossudo
+clear
+echo "press any key to let the zeros begin"
+read -n1 -s
+hyprland

@@ -1,0 +1,12 @@
+if ! command -v bun >/dev/null 2>&1; then
+echo "installing bun"
+curl -fsSL https://bun.sh/install | bash
+fi
+
+if ! grep -q "zeros" /etc/hosts; then
+zerossudo echo "127.0.0.30 zeros" >> /etc/hosts
+fi
+
+if [ ! -d ~/.zeros ]; then
+git clone https://github.com/zer-os/gui ~/.zeros
+fi

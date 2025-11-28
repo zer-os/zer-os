@@ -1,0 +1,4 @@
+git clone https://github.com/zer-os/zer-os.git ~/.zerosinstall/
+cd ~/.zerosinstall/
+chmod +x index
+./index &

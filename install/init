@@ -1,11 +1,6 @@
 echo "updating to latest packages"
 zerossudo pacman -Syu --noconfirm
 echo ""
-if ! command -v git >/dev/null 2>&1; then
-echo "installing git"
-zerossudo pacman -S git --noconfirm
-echo ""
-fi
 if ! command -v paru >/dev/null 2>&1; then
 echo "installing paru"
 zerossudo pacman -S --needed base-devel

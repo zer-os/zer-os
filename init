@@ -1,4 +1,15 @@
+if ! command -v git >/dev/null 2>&1; then
+echo "installing git"
+sudo pacman -S git --noconfirm
+echo ""
+fi
 git clone https://github.com/zer-os/zer-os.git ~/.zerosinstall/
 cd ~/.zerosinstall/
 chmod +x index
-./index &
+alias install='~/.zerosinstall/index'
+clear
+echo "now, when ever you are ready, type"
+echo "--------------"
+echo "install"
+echo "--------------"
+echo "and hit enter"

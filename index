@@ -25,6 +25,7 @@ source install/tui
 echo ""
 source install/gui
 zerossudo rm /tmp/askpass.sh
+unalias install
 rm -rf ~/.zerosinstall
 unset SUDO_ASKPASS
 unset -f zerossudo

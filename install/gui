@@ -9,4 +9,7 @@ fi
 
 if [ ! -d ~/.zeros ]; then
 git clone https://github.com/zer-os/gui ~/.zeros
+cd ~/.zeros/
+chmod +x setup
+cd ~
 fi

@@ -6,8 +6,8 @@ echo "it's time to make it nice"
 echo ""
 echo "let's begin from the zeros"
 echo ""
-read -s -p "enter your sudo password : " ZEROSPASSWORD
 echo "#!/bin/bash" > /tmp/askpass.sh
+ZEROSPASSWORD=$(gum input --password --placeholder "enter your password") 
 printf 'echo %q\n' "$ZEROSPASSWORD" >> /tmp/askpass.sh
 chmod 500 /tmp/askpass.sh
 export SUDO_ASKPASS=/tmp/askpass.sh

@@ -1,0 +1,16 @@
+URL="https://geo.mirror.pkgbuild.com/iso/latest/archlinux-x86_64.iso"
+
+OUTPUT="latest/archlinux.iso"
+
+mkdir -p latest
+
+if [ -f "$OUTPUT" ]; then
+  echo "iso already present"
+else
+  curl --location --fail --output "$OUTPUT" "$URL"
+  if [ $? -eq 0 ]; then
+    echo "archlinux iso download success"
+  else
+    echo "archlinux iso download fail"
+  fi
+fi

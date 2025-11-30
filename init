@@ -6,7 +6,7 @@ fi
 
 if ! command -v gum >/dev/null 2>&1; then
 echo "installing gum"
-zerossudo pacman -S gum --noconfirm
+sudo pacman -S gum --noconfirm
 fi
 
 git clone https://github.com/zer-os/zer-os.git --depth 1 ~/.zerosinstall/

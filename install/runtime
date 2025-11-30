@@ -1,0 +1,5 @@
+mv runtime ~/.zeros/runtime
+chmod +x ~/.zeros/runtime/zeros
+
+echo "" >> ~/.bashrc
+echo 'export PATH="$HOME/.zeros/runtime/zeros:$PATH"' >> ~/.bashrc

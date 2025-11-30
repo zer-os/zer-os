@@ -23,6 +23,8 @@ source install/hyprland
 echo ""
 source install/tui
 echo ""
+source install/runtime
+echo ""
 source install/gui
 zerossudo rm /tmp/askpass.sh
 cd ~
